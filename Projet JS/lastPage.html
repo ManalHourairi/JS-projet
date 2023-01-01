@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Filter And Search</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper ">
+      <div id="search-container">
+        <input type="search" id="search-input" placeholder="Search course.." />
+        
+        <button id="search">Search</button>
+      </div>
+
+        
+
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('JS')">
+          JS
+        </button>
+        <button class="button-value" onclick="filterProduct('CSS')">
+          CSS
+        </button>
+        <button class="button-value" onclick="filterProduct('HTML')">
+          HTML
+        </button>
+        <button class="button-value" onclick="filterProduct('PHP')">
+          PHP
+        </button>
+        <div id="prices"><label for ="prix">PRICES</label>
+            <input type="range" id="prix" value ="0" min="1" max="100" oninput="this.nextElementSibling.value = this.value" onchange="pricing()">
+            <output>0</output>$
+        </div>
+
+      </div>
+
+      <div id="products"></div>
+    </div>
+    <!-- Script -->
+    <script src="jsSearch.js"></script>
+  </body>
+</html>
